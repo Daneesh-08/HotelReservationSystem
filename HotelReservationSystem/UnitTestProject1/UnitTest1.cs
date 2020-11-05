@@ -26,5 +26,13 @@ namespace UnitTestProject1
             Hotel cheapest = hotelcollection.GetCheapestHotel(dates);
             Assert.AreEqual("Lakewood", cheapest.name);
         }
+        [TestMethod]
+        public void TestMethod3()
+        {
+            hotelcollection.AddHotel(new Hotel("Lakewood", 110, 90));
+            hotelcollection.AddHotel(new Hotel("Bridgewood", 150, 50));
+            hotelcollection.AddHotel(new Hotel("Ridgewood", 220, 150));
+            Assert.AreEqual(220, hotelcollection.HotelList[2].RegularRatesWeekday);
+        }
     }
 }
