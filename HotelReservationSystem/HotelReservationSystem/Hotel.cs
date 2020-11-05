@@ -17,6 +17,6 @@ namespace HotelReservationSystem
         {
             this.name = name;
             this.RegularRates = RegularRates;
-        }
+        }        
     }
 }
